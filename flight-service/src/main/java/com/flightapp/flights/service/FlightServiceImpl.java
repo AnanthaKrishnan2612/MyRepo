@@ -24,7 +24,7 @@ public class FlightServiceImpl implements FlightService {
 	
 	
 
-	public FlightServiceImpl(FlightRepository flightRepository,ModelMapper modelMapper) {
+	public FlightServiceImpl(FlightRepository flightRepository, ModelMapper modelMapper) {
 		this.flightRepository = flightRepository;
 		this.modelMapper = modelMapper;
 	}
