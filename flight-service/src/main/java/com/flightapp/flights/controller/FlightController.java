@@ -32,6 +32,11 @@ public class FlightController {
 
 		return ResponseEntity.ok(flightService.addNewAirline(flightDto));
 	}
+	@PutMapping("/inventory/add")
+	public ResponseEntity<FlightDTO> updateAirlineWithInventoryOrSchedule( @RequestBody FlightDTO flight)
+			throws Exception {
+		return ResponseEntity.ok(flightService.updateAirlineWithInventoryOrSchedule(flight));
+	}
 
 	@PutMapping("/block/{airline}")
 	public ResponseEntity<List<FlightDTO>> blockFlights(@PathVariable String airline) {
@@ -43,7 +48,7 @@ public class FlightController {
 		return ResponseEntity.ok(flightService.unblockFlights(airline));
 	}
 
-	@GetMapping("/allflights/")
+	@GetMapping("/allflights")
 	public ResponseEntity<List<FlightDTO>> getAllUnblockedFlights() {
 		return ResponseEntity.ok(flightService.getAllUnblockedFlights());
 	}
