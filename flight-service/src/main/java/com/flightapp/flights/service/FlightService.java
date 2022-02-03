@@ -20,5 +20,8 @@ public interface FlightService {
 
 	public List<FlightDTO> searchForFlights(Boolean isOneWay, String startingLocation, String destination,
 			Date departureDate, Date returnDate) throws FlightException;
+	
+	public FlightDTO updateAirlineWithInventoryOrSchedule(FlightDTO flightToBeUpdated)
+			throws Exception;
 
 }

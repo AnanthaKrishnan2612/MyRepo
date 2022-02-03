@@ -1,8 +1,13 @@
-package com.flightapp.flights.dto;
+package com.flightapp.flights.entity;
 
 import java.sql.Date;
 import java.sql.Time;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.flightapp.flights.model.TypeOfMeal;
 
 import lombok.AllArgsConstructor;
@@ -10,12 +15,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class FlightDTO {
-
+@Table(name="Flights")
+public class FlightEntity {
+	@Id
 	private String flightNumber;
 
 	private String airline;
@@ -46,12 +53,16 @@ public class FlightDTO {
 
 	private Boolean isBooked;
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private Date departureDate;
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm:ss")
 	private Time departureTime;
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private Date returnDate;
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm:ss")
 	private Time returnTime;
 
 }
