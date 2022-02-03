@@ -31,15 +31,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		// configure AuthenticationManager so that it knows from where to load
-		// user for matching credentials
-		// Use BCryptPasswordEncoder
-		// auth.userDetailsService(jwtUserDetailsService);
 		auth.userDetailsService(jwtUserDetailsService).passwordEncoder(passwordEncoder());
-
-		// auth.jdbcAuthentication()
-		// auth.inMemoryAuthentication()
-		// auth.ldapAuthentication()
 	}
 
 	@Bean
@@ -59,8 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		httpSecurity.csrf().disable()
 				// dont authenticate this particular request
 				.authorizeRequests()
-				.antMatchers("/authenticate/admin/login", "/api/v1.0/flight/flightservice/flights/search",
-						"/api/v1.0/flight/flightservice/flights/flight/**", "/api/v1.0/bookingservice/**")
+				.antMatchers("/api/user/register")
 				.permitAll().
 				// all other requests need to be authenticated
 				// /greet

@@ -21,7 +21,7 @@ import com.flightapp.gatewayservice.util.JwtTokenUtil;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/authenticate")
+@RequestMapping("/api")
 public class JwtAuthenticationController {
 
 	@Autowired
