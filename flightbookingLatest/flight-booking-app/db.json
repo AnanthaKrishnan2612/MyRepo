@@ -1,0 +1,69 @@
+{
+    "flightDTO":[{
+
+         "flightNumber":"1234", 
+         "airline":"AA", 
+         "startingLocation":"LHR", 
+         "destination":"DFW",
+         "departureDateTime": "2022-03-01",
+         "returnDateTime":"2022-03-03", 
+         "scheduledDays":"2", 
+         "totalSeats":1, 
+         "instrumentsUsed":"A50",
+         "totalNoOfRows":1,
+         "ticketCost":222, 
+         "meals":"Veg", 
+         "isBlocked":false, 
+         "isOneWay":true,
+         "isBooked":false,
+         "departureDate":"2022-03-01",
+         "returnDate":"2022-03-03", 
+         "departureTime":"2022-03-01",
+         "returnTime":"2022-03-03"
+
+
+    },{
+        "flightNumber":"2345", 
+    "airline":"AA", 
+    "startingLocation":"LHR", 
+    "destination":"DFW",
+    "departureDateTime": "2022-03-01",
+    "returnDateTime":"2022-03-03", 
+    "scheduledDays":"2", 
+    "totalSeats":1, 
+    "instrumentsUsed":"A50",
+    "totalNoOfRows":1,
+    "ticketCost":222, 
+    "meals":"Veg", 
+    "isBlocked":false, 
+    "isOneWay":true,
+    "isBooked":false,
+    "departureDate":"2022-03-01",
+    "returnDate":"2022-03-03", 
+    "departureTime":"2022-03-01",
+    "returnTime":"2022-03-03"
+},
+{
+    "flightNumber":"3456", 
+"airline":"AA", 
+"startingLocation":"DFW", 
+"destination":"PHX",
+"departureDateTime": "2022-03-01",
+"returnDateTime":"2022-03-03", 
+"scheduledDays":"2", 
+"totalSeats":1, 
+"instrumentsUsed":"A50",
+"totalNoOfRows":1,
+"ticketCost":222, 
+"meals":"Veg", 
+"isBlocked":false, 
+"isOneWay":true,
+"isBooked":false,
+"departureDate":"2022-03-01",
+"returnDate":"2022-03-03", 
+"departureTime":"2022-03-01",
+"returnTime":"2022-03-03"
+}
+]
+
+}
