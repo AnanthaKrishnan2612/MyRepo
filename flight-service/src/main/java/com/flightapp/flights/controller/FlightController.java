@@ -2,8 +2,10 @@ package com.flightapp.flights.controller;
 
 import java.util.List;
 
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,10 +18,12 @@ import com.flightapp.flights.dto.FlightDTO;
 import com.flightapp.flights.service.FlightService;
 
 @RestController
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/airlines")
 public class FlightController {
 
 	private final FlightService flightService;
+	private static final Logger logger = LoggerFactory.getLogger(FlightController.class);
 	
 	
 	public FlightController(FlightService flightService) {
@@ -60,8 +64,12 @@ public class FlightController {
 
 	@PostMapping("/search")
 	public ResponseEntity<List<FlightDTO>> getFlightsBySearchParam(@RequestBody FlightDTO flights) throws Exception {
-		return ResponseEntity.ok(flightService.searchForFlights(flights.getIsOneWay(), flights.getOrigin(),
+		logger.info("SearchFlight request :  " ,flights.getOrigin(),flights.getDestination(),flights.getIsOneWay(),flights.getDepartureDate(),flights.getReturnDate());
+		ResponseEntity<List<FlightDTO>> response = ResponseEntity.ok(flightService.searchForFlights(flights.getIsOneWay(), flights.getOrigin(),
 				flights.getDestination(), flights.getDepartureDate(), flights.getReturnDate()));
+		logger.info("Flights retrieved by getFlightsBySearchParam : {} ", response.getBody());
+		
+		return response;
 	}
 
 }

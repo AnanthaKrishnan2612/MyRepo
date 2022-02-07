@@ -1,36 +1,1156 @@
-2022-02-03 18:40:09.772  INFO 6812 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 15.0.1 on LTIN358155 with PID 6812 (C:\Users\2108837\OneDrive - Cognizant\Workspace\flight-service\target\classes started by 2108837 in C:\Users\2108837\OneDrive - Cognizant\Workspace\flight-service)
-2022-02-03 18:40:09.783  INFO 6812 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
-2022-02-03 18:40:09.845  INFO 6812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-02-03 18:40:09.846  INFO 6812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-02-03 18:40:11.598  INFO 6812 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-02-03 18:40:11.840  INFO 6812 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 233 ms. Found 1 JPA repository interfaces.
-2022-02-03 18:40:12.218  INFO 6812 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=36b20314-6d3a-35a7-96e7-f0d74188728e
-2022-02-03 18:40:13.072  INFO 6812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-02-03 18:40:13.086  INFO 6812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-02-03 18:40:13.087  INFO 6812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2022-02-03 18:40:13.280  INFO 6812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
-2022-02-03 18:40:13.281  INFO 6812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3435 ms
-2022-02-03 18:40:13.511  WARN 6812 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
-2022-02-03 18:40:13.516  INFO 6812 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-02-03 18:40:13.549  INFO 6812 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+2022-02-07 00:03:47.838  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:08:47.860  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:13:47.876  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:16:45.446  INFO 7348 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 00:16:45.447  INFO 7348 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644173205447, current=DOWN, previous=UP]
+2022-02-07 00:16:45.453  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:16:45.469  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:16:45.573  INFO 7348 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:16:45.579  INFO 7348 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-07 00:16:45.606  INFO 7348 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-07 00:16:45.609  INFO 7348 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 00:16:48.625  INFO 7348 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 00:16:48.637  INFO 7348 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 00:16:48.643  INFO 7348 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 00:16:49.062  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 00:16:49.062  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 00:16:49.804  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 00:16:49.816  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
+2022-02-07 00:16:49.935  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 00:16:50.117  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 00:16:50.118  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 00:16:50.118  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 00:16:50.157  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 00:16:50.157  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1089 ms
+2022-02-07 00:16:50.284  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 00:16:50.291  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-02-07 00:16:50.323  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-02-07 00:16:50.324  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 00:16:50.399  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 00:16:50.400  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:16:50.751  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 00:16:51.438  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 00:16:51.956  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 00:16:52.246  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 00:16:52.280  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 00:16:52.328  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 00:16:52.336  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 00:16:52.337  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:16:52.345  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 00:16:52.345  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 00:16:52.346  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 00:16:52.346  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 00:16:52.346  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 00:16:52.346  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 00:16:52.346  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 00:16:52.372  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 00:16:52.373  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 00:16:52.374  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 00:16:52.375  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644173212375 with initial instances count: 3
+2022-02-07 00:16:52.378  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 00:16:52.378  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644173212378, current=UP, previous=STARTING]
+2022-02-07 00:16:52.381  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 00:16:52.381  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 00:16:52.384  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:16:52.394  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:16:52.622  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 3.81 seconds (JVM running for 3194.745)
+2022-02-07 00:16:52.626  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 00:17:09.781  INFO 7348 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 00:17:09.781  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-07 00:17:09.784  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-02-07 00:17:09.806  WARN 7348 --- [http-nio-8088-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot coerce empty String ("") to `com.flightapp.flights.model.TypeOfMeal` value (but could if coercion was enabled using `CoercionConfig`); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot coerce empty String ("") to `com.flightapp.flights.model.TypeOfMeal` value (but could if coercion was enabled using `CoercionConfig`)<LF> at [Source: (PushbackInputStream); line: 1, column: 274] (through reference chain: com.flightapp.flights.dto.FlightDTO["meals"])]
+2022-02-07 00:21:07.820  INFO 7348 --- [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 00:21:07.821  INFO 7348 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644173467821, current=DOWN, previous=UP]
+2022-02-07 00:21:07.821  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:21:07.831  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:21:07.911  INFO 7348 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:21:07.912  INFO 7348 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-02-07 00:21:07.928  INFO 7348 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-02-07 00:21:07.928  INFO 7348 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 00:21:10.946  INFO 7348 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 00:21:10.959  INFO 7348 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 00:21:10.966  INFO 7348 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 00:21:11.356  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 00:21:11.357  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 00:21:11.987  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 00:21:12.000  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+2022-02-07 00:21:12.105  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 00:21:12.273  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 00:21:12.276  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 00:21:12.277  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 00:21:12.310  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 00:21:12.310  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 948 ms
+2022-02-07 00:21:12.411  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 00:21:12.420  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-02-07 00:21:12.447  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-02-07 00:21:12.447  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 00:21:12.511  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 00:21:12.511  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:21:12.820  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 00:21:13.097  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 00:21:13.233  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 00:21:13.537  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 00:21:13.572  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 00:21:13.617  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 00:21:13.626  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 00:21:13.627  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:21:13.628  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 00:21:13.628  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 00:21:13.628  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 00:21:13.629  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 00:21:13.629  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 00:21:13.629  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 00:21:13.629  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 00:21:13.651  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 00:21:13.653  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 00:21:13.653  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 00:21:13.655  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644173473655 with initial instances count: 3
+2022-02-07 00:21:13.659  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 00:21:13.659  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644173473659, current=UP, previous=STARTING]
+2022-02-07 00:21:13.662  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 00:21:13.663  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 00:21:13.664  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:21:13.675  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:21:13.893  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 2.788 seconds (JVM running for 3456.017)
+2022-02-07 00:21:13.898  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 00:21:30.593  INFO 7348 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 00:21:30.593  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-07 00:21:30.595  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-07 00:21:30.601  WARN 7348 --- [http-nio-8088-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot coerce empty String ("") to `com.flightapp.flights.model.TypeOfMeal` value (but could if coercion was enabled using `CoercionConfig`); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot coerce empty String ("") to `com.flightapp.flights.model.TypeOfMeal` value (but could if coercion was enabled using `CoercionConfig`)<LF> at [Source: (PushbackInputStream); line: 1, column: 274] (through reference chain: com.flightapp.flights.dto.FlightDTO["meals"])]
+2022-02-07 00:25:57.739 ERROR 7348 --- [http-nio-8088-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/airlines] threw exception [Request processing failed; nested exception is com.flightapp.flights.exception.FlightException: Return Date is mandatory] with root cause
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-02-03 18:40:13.575 ERROR 6812 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+com.flightapp.flights.exception.FlightException: Return Date is mandatory
+	at com.flightapp.flights.service.FlightServiceImpl.searchForFlights(FlightServiceImpl.java:148) ~[classes/:na]
+	at com.flightapp.flights.controller.FlightController.getFlightsBySearchParam(FlightController.java:67) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.6.jar:2.5.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
 
-***************************
-APPLICATION FAILED TO START
-***************************
+2022-02-07 00:26:13.641  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:26:21.447  INFO 7348 --- [http-nio-8088-exec-3] c.f.flights.controller.FlightController  : Flights retrieved by getFlightsBySearchParam : [] 
+2022-02-07 00:29:49.848  WARN 7348 --- [http-nio-8088-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name<LF> at [Source: (PushbackInputStream); line: 10, column: 2]]
+2022-02-07 00:29:59.143 ERROR 7348 --- [http-nio-8088-exec-9] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/airlines] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 
-Description:
+java.lang.NullPointerException: null
+	at com.flightapp.flights.service.FlightServiceImpl.searchForFlights(FlightServiceImpl.java:134) ~[classes/:na]
+	at com.flightapp.flights.controller.FlightController.getFlightsBySearchParam(FlightController.java:67) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.6.jar:2.5.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
 
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+2022-02-07 00:30:56.898  WARN 7348 --- [http-nio-8088-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name<LF> at [Source: (PushbackInputStream); line: 11, column: 2]]
+2022-02-07 00:31:03.475  INFO 7348 --- [http-nio-8088-exec-1] c.f.flights.controller.FlightController  : Flights retrieved by getFlightsBySearchParam : [com.flightapp.flights.dto.FlightDTO@4fa22554, com.flightapp.flights.dto.FlightDTO@cc6f5b9, com.flightapp.flights.dto.FlightDTO@ef01e6e] 
+2022-02-07 00:31:13.653  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:33:57.520  INFO 7348 --- [Thread-13] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 00:33:57.521  INFO 7348 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644174237521, current=DOWN, previous=UP]
+2022-02-07 00:33:57.522  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:33:57.552  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:33:57.647  INFO 7348 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:33:57.649  INFO 7348 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-02-07 00:33:57.666  INFO 7348 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-02-07 00:33:57.667  INFO 7348 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 00:34:00.680  INFO 7348 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 00:34:00.695  INFO 7348 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 00:34:00.698  INFO 7348 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 00:34:01.041  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 00:34:01.042  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 00:34:01.720  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 00:34:01.731  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+2022-02-07 00:34:01.837  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 00:34:02.077  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 00:34:02.078  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 00:34:02.078  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 00:34:02.110  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 00:34:02.110  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1064 ms
+2022-02-07 00:34:02.250  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 00:34:02.261  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-02-07 00:34:02.300  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-02-07 00:34:02.300  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 00:34:02.363  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 00:34:02.363  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:34:02.693  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 00:34:02.978  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 00:34:03.116  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 00:34:03.465  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 00:34:03.499  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 00:34:03.554  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 00:34:03.557  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 00:34:03.557  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:34:03.559  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 00:34:03.559  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 00:34:03.559  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 00:34:03.559  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 00:34:03.560  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 00:34:03.560  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 00:34:03.560  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 00:34:03.585  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 00:34:03.587  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 00:34:03.587  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 00:34:03.588  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644174243588 with initial instances count: 2
+2022-02-07 00:34:03.592  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 00:34:03.592  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644174243592, current=UP, previous=STARTING]
+2022-02-07 00:34:03.594  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 00:34:03.595  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 00:34:03.596  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:34:03.606  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:34:03.852  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 3.002 seconds (JVM running for 4225.976)
+2022-02-07 00:34:03.855  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 00:34:21.663  INFO 7348 --- [Thread-19] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 00:34:21.664  INFO 7348 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644174261664, current=DOWN, previous=UP]
+2022-02-07 00:34:21.675  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:34:21.694  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:34:21.774  INFO 7348 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:34:21.775  INFO 7348 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-02-07 00:34:21.789  INFO 7348 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-02-07 00:34:21.790  INFO 7348 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 00:34:24.808  INFO 7348 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 00:34:24.821  INFO 7348 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 00:34:24.828  INFO 7348 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 00:34:25.202  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 00:34:25.203  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 00:34:25.885  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 00:34:25.897  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+2022-02-07 00:34:26.046  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 00:34:26.238  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 00:34:26.241  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 00:34:26.241  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 00:34:26.276  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 00:34:26.277  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2022-02-07 00:34:26.429  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 00:34:26.439  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-02-07 00:34:26.474  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-02-07 00:34:26.475  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 00:34:26.521  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 00:34:26.521  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:34:26.950  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 00:34:27.260  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 00:34:27.381  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 00:34:27.659  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 00:34:27.703  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 00:34:27.738  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 00:34:27.740  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 00:34:27.741  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:34:27.743  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 00:34:27.743  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 00:34:27.743  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 00:34:27.743  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 00:34:27.743  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 00:34:27.743  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 00:34:27.743  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 00:34:27.764  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 00:34:27.765  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 00:34:27.766  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 00:34:27.767  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644174267766 with initial instances count: 2
+2022-02-07 00:34:27.771  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 00:34:27.771  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644174267771, current=UP, previous=STARTING]
+2022-02-07 00:34:27.773  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 00:34:27.774  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 00:34:27.776  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:34:27.786  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:34:27.998  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 3.013 seconds (JVM running for 4250.122)
+2022-02-07 00:34:28.004  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 00:36:03.268  INFO 7348 --- [Thread-25] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 00:36:03.268  INFO 7348 --- [Thread-25] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644174363268, current=DOWN, previous=UP]
+2022-02-07 00:36:03.269  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:36:03.275  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:36:03.354  INFO 7348 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:36:03.355  INFO 7348 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2022-02-07 00:36:03.372  INFO 7348 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2022-02-07 00:36:03.373  INFO 7348 --- [Thread-25] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 00:36:06.382  INFO 7348 --- [Thread-25] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 00:36:06.396  INFO 7348 --- [Thread-25] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 00:36:06.404  INFO 7348 --- [Thread-25] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 00:36:06.913  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 00:36:06.914  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 00:36:07.521  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 00:36:07.536  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
+2022-02-07 00:36:07.644  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 00:36:07.819  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 00:36:07.820  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 00:36:07.820  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 00:36:07.854  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 00:36:07.855  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 939 ms
+2022-02-07 00:36:07.996  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 00:36:08.010  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-02-07 00:36:08.037  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-02-07 00:36:08.037  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 00:36:08.092  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 00:36:08.092  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:36:08.387  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 00:36:08.665  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 00:36:08.794  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 00:36:09.073  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 00:36:09.105  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 00:36:09.141  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 00:36:09.146  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 00:36:09.147  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:36:09.148  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 00:36:09.148  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 00:36:09.148  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 00:36:09.149  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 00:36:09.149  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 00:36:09.149  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 00:36:09.149  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 00:36:09.170  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 00:36:09.174  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 00:36:09.175  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 00:36:09.176  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644174369176 with initial instances count: 3
+2022-02-07 00:36:09.180  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 00:36:09.181  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644174369181, current=UP, previous=STARTING]
+2022-02-07 00:36:09.183  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 00:36:09.184  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 00:36:09.189  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:36:09.200  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:36:09.441  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 2.839 seconds (JVM running for 4351.565)
+2022-02-07 00:36:09.446  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 00:41:09.161  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:41:31.218  INFO 7348 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 00:41:31.218  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-07 00:41:31.220  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-07 00:41:31.226  INFO 7348 --- [http-nio-8088-exec-1] c.f.flights.controller.FlightController  : SearchFlight request :  
+2022-02-07 00:41:31.243  INFO 7348 --- [http-nio-8088-exec-1] c.f.flights.controller.FlightController  : Flights retrieved by getFlightsBySearchParam : [] 
+2022-02-07 00:46:09.164  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:48:11.856  INFO 7348 --- [http-nio-8088-exec-3] c.f.flights.controller.FlightController  : SearchFlight request :  
+2022-02-07 00:48:11.861  INFO 7348 --- [http-nio-8088-exec-3] c.f.flights.controller.FlightController  : Flights retrieved by getFlightsBySearchParam : [] 
+2022-02-07 00:51:09.175  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:51:35.731  INFO 7348 --- [Thread-31] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 00:51:35.732  INFO 7348 --- [Thread-31] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644175295732, current=DOWN, previous=UP]
+2022-02-07 00:51:35.734  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:51:35.753  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:51:35.822  INFO 7348 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:51:35.824  INFO 7348 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-02-07 00:51:35.842  INFO 7348 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2022-02-07 00:51:35.844  INFO 7348 --- [Thread-31] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 00:51:38.860  INFO 7348 --- [Thread-31] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 00:51:38.872  INFO 7348 --- [Thread-31] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 00:51:38.877  INFO 7348 --- [Thread-31] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 00:51:39.446  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 00:51:39.446  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 00:51:40.049  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 00:51:40.065  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
+2022-02-07 00:51:40.174  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 00:51:40.328  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 00:51:40.329  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 00:51:40.329  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 00:51:40.368  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 00:51:40.368  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 918 ms
+2022-02-07 00:51:40.542  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 00:51:40.549  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-02-07 00:51:40.574  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-02-07 00:51:40.574  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 00:51:40.622  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 00:51:40.622  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:51:41.007  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 00:51:41.407  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 00:51:41.533  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 00:51:41.788  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 00:51:41.831  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 00:51:41.923  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 00:51:41.929  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 00:51:41.929  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:51:41.930  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 00:51:41.930  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 00:51:41.931  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 00:51:41.931  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 00:51:41.931  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 00:51:41.931  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 00:51:41.931  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 00:51:41.944  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 00:51:41.945  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 00:51:41.945  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 00:51:41.946  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644175301946 with initial instances count: 3
+2022-02-07 00:51:41.950  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 00:51:41.950  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644175301950, current=UP, previous=STARTING]
+2022-02-07 00:51:41.952  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 00:51:41.971  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 00:51:41.975  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:51:42.020  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:51:42.292  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 3.233 seconds (JVM running for 5284.415)
+2022-02-07 00:51:42.300  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 00:52:18.025  INFO 7348 --- [Thread-37] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 00:52:18.026  INFO 7348 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644175338026, current=DOWN, previous=UP]
+2022-02-07 00:52:18.026  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:52:18.037  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:52:18.160  INFO 7348 --- [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:52:18.161  INFO 7348 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-02-07 00:52:18.180  INFO 7348 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-02-07 00:52:18.184  INFO 7348 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 00:52:21.200  INFO 7348 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 00:52:21.251  INFO 7348 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 00:52:21.253  INFO 7348 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 00:52:21.713  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 00:52:21.713  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 00:52:22.487  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 00:52:22.498  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+2022-02-07 00:52:22.616  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 00:52:22.807  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 00:52:22.809  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 00:52:22.809  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 00:52:22.840  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 00:52:22.840  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1125 ms
+2022-02-07 00:52:23.077  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 00:52:23.085  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-02-07 00:52:23.110  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-02-07 00:52:23.111  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 00:52:23.160  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 00:52:23.160  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:52:23.533  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 00:52:23.974  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 00:52:24.095  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 00:52:24.382  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 00:52:24.410  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 00:52:24.449  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 00:52:24.451  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 00:52:24.451  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:52:24.453  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 00:52:24.453  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 00:52:24.453  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 00:52:24.453  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 00:52:24.453  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 00:52:24.453  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 00:52:24.456  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 00:52:24.474  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 00:52:24.476  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 00:52:24.476  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 00:52:24.478  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644175344477 with initial instances count: 3
+2022-02-07 00:52:24.483  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 00:52:24.483  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644175344483, current=UP, previous=STARTING]
+2022-02-07 00:52:24.484  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:52:24.487  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 00:52:24.491  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 00:52:24.496  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:52:24.714  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 3.236 seconds (JVM running for 5326.838)
+2022-02-07 00:52:24.718  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 00:52:47.161  INFO 7348 --- [Thread-43] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 00:52:47.163  INFO 7348 --- [Thread-43] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644175367163, current=DOWN, previous=UP]
+2022-02-07 00:52:47.163  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:52:47.183  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:52:47.240  INFO 7348 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:52:47.241  INFO 7348 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-02-07 00:52:47.258  INFO 7348 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2022-02-07 00:52:47.259  INFO 7348 --- [Thread-43] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 00:52:50.271  INFO 7348 --- [Thread-43] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 00:52:50.285  INFO 7348 --- [Thread-43] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 00:52:50.293  INFO 7348 --- [Thread-43] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 00:52:50.816  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 00:52:50.816  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 00:52:51.503  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 00:52:51.522  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+2022-02-07 00:52:51.632  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 00:52:51.779  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 00:52:51.788  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 00:52:51.788  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 00:52:51.825  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 00:52:51.825  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1007 ms
+2022-02-07 00:52:52.089  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 00:52:52.097  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-02-07 00:52:52.126  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2022-02-07 00:52:52.127  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 00:52:52.169  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 00:52:52.170  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 00:52:52.404  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 00:52:52.893  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 00:52:53.032  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 00:52:53.324  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 00:52:53.373  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 00:52:53.423  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 00:52:53.426  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 00:52:53.428  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 00:52:53.428  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 00:52:53.428  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 00:52:53.429  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 00:52:53.429  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 00:52:53.429  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 00:52:53.429  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 00:52:53.429  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 00:52:53.448  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 00:52:53.449  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 00:52:53.449  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 00:52:53.450  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644175373450 with initial instances count: 3
+2022-02-07 00:52:53.454  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 00:52:53.454  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644175373454, current=UP, previous=STARTING]
+2022-02-07 00:52:53.456  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 00:52:53.456  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 00:52:53.457  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 00:52:53.469  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 00:52:53.722  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 3.153 seconds (JVM running for 5355.846)
+2022-02-07 00:52:53.725  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 00:52:56.539  INFO 7348 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 00:52:56.543  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-07 00:52:56.545  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-07 00:52:56.553  INFO 7348 --- [http-nio-8088-exec-1] c.f.flights.controller.FlightController  : SearchFlight request :  
+2022-02-07 00:52:56.565  INFO 7348 --- [http-nio-8088-exec-1] c.f.flights.controller.FlightController  : Flights retrieved by getFlightsBySearchParam : [] 
+2022-02-07 00:57:23.348  INFO 7348 --- [http-nio-8088-exec-3] c.f.flights.controller.FlightController  : SearchFlight request :  
+2022-02-07 00:57:23.351 ERROR 7348 --- [http-nio-8088-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/airlines] threw exception [Request processing failed; nested exception is com.flightapp.flights.exception.FlightException: Return Date is mandatory] with root cause
 
-Reason: Failed to determine a suitable driver class
+com.flightapp.flights.exception.FlightException: Return Date is mandatory
+	at com.flightapp.flights.service.FlightServiceImpl.searchForFlights(FlightServiceImpl.java:148) ~[classes/:na]
+	at com.flightapp.flights.controller.FlightController.getFlightsBySearchParam(FlightController.java:68) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.6.jar:2.5.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
 
+2022-02-07 00:57:32.652  INFO 7348 --- [http-nio-8088-exec-4] c.f.flights.controller.FlightController  : SearchFlight request :  
+2022-02-07 00:57:32.666  INFO 7348 --- [http-nio-8088-exec-4] c.f.flights.controller.FlightController  : Flights retrieved by getFlightsBySearchParam : [com.flightapp.flights.dto.FlightDTO@6703248f, com.flightapp.flights.dto.FlightDTO@41936844, com.flightapp.flights.dto.FlightDTO@2e40c3a2] 
+2022-02-07 00:57:53.432  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:02:40.540  INFO 7348 --- [http-nio-8088-exec-6] c.f.flights.controller.FlightController  : SearchFlight request :  
+2022-02-07 01:02:40.542 ERROR 7348 --- [http-nio-8088-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/airlines] threw exception [Request processing failed; nested exception is com.flightapp.flights.exception.FlightException: Return Date is mandatory] with root cause
 
-Action:
+com.flightapp.flights.exception.FlightException: Return Date is mandatory
+	at com.flightapp.flights.service.FlightServiceImpl.searchForFlights(FlightServiceImpl.java:148) ~[classes/:na]
+	at com.flightapp.flights.controller.FlightController.getFlightsBySearchParam(FlightController.java:68) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.6.jar:2.5.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
 
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+2022-02-07 01:02:44.287  INFO 7348 --- [http-nio-8088-exec-7] c.f.flights.controller.FlightController  : SearchFlight request :  
+2022-02-07 01:02:44.295  INFO 7348 --- [http-nio-8088-exec-7] c.f.flights.controller.FlightController  : Flights retrieved by getFlightsBySearchParam : [com.flightapp.flights.dto.FlightDTO@22486e6b, com.flightapp.flights.dto.FlightDTO@7d9355ba, com.flightapp.flights.dto.FlightDTO@44198c94] 
+2022-02-07 01:02:53.445  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:04:40.008  INFO 7348 --- [Thread-49] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 01:04:40.009  INFO 7348 --- [Thread-49] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644176080009, current=DOWN, previous=UP]
+2022-02-07 01:04:40.013  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 01:04:40.029  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 01:04:40.221  INFO 7348 --- [Thread-49] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 01:04:40.223  INFO 7348 --- [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2022-02-07 01:04:40.242  INFO 7348 --- [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2022-02-07 01:04:40.244  INFO 7348 --- [Thread-49] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 01:04:43.252  INFO 7348 --- [Thread-49] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 01:04:43.268  INFO 7348 --- [Thread-49] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 01:04:43.277  INFO 7348 --- [Thread-49] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 01:04:43.770  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 01:04:43.770  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 01:04:44.437  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 01:04:44.459  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2022-02-07 01:04:44.547  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 01:04:44.723  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 01:04:44.724  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 01:04:44.724  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 01:04:44.768  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 01:04:44.768  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 996 ms
+2022-02-07 01:04:44.988  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 01:04:44.994  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2022-02-07 01:04:45.018  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2022-02-07 01:04:45.019  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 01:04:45.066  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 01:04:45.066  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 01:04:45.370  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 01:04:45.791  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 01:04:45.942  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 01:04:46.236  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 01:04:46.263  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 01:04:46.343  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 01:04:46.345  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 01:04:46.346  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:04:46.347  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 01:04:46.347  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 01:04:46.347  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 01:04:46.347  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 01:04:46.348  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 01:04:46.348  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 01:04:46.348  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 01:04:46.361  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 01:04:46.362  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 01:04:46.362  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 01:04:46.363  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644176086363 with initial instances count: 3
+2022-02-07 01:04:46.367  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 01:04:46.367  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644176086367, current=UP, previous=STARTING]
+2022-02-07 01:04:46.368  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 01:04:46.379  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 01:04:46.404  INFO 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
 
+2022-02-07 01:04:46.625  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.json.value.default.type' was supplied but isn't a known config.
+2022-02-07 01:04:46.625  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.json.use.type.headers' was supplied but isn't a known config.
+2022-02-07 01:04:46.625  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+2022-02-07 01:04:46.625  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.deserializer.value.delegate.class' was supplied but isn't a known config.
+2022-02-07 01:04:46.625  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.json.add.type.headers' was supplied but isn't a known config.
+2022-02-07 01:04:46.625  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.deserializer.key.delegate.class' was supplied but isn't a known config.
+2022-02-07 01:04:46.627  INFO 7348 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2022-02-07 01:04:46.627  INFO 7348 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2022-02-07 01:04:46.628  INFO 7348 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1644176086625
+2022-02-07 01:04:46.636  INFO 7348 --- [restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group_id-1, groupId=group_id] Subscribed to topic(s): cancelticket
+2022-02-07 01:04:46.716  INFO 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2022-02-07 01:04:46.722  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.json.value.default.type' was supplied but isn't a known config.
+2022-02-07 01:04:46.723  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.json.use.type.headers' was supplied but isn't a known config.
+2022-02-07 01:04:46.723  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+2022-02-07 01:04:46.723  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.deserializer.value.delegate.class' was supplied but isn't a known config.
+2022-02-07 01:04:46.723  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.json.add.type.headers' was supplied but isn't a known config.
+2022-02-07 01:04:46.723  WARN 7348 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'spring.deserializer.key.delegate.class' was supplied but isn't a known config.
+2022-02-07 01:04:46.723  INFO 7348 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2022-02-07 01:04:46.723  INFO 7348 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2022-02-07 01:04:46.723  INFO 7348 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1644176086723
+2022-02-07 01:04:46.723  INFO 7348 --- [restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group_id-2, groupId=group_id] Subscribed to topic(s): bookticket
+2022-02-07 01:04:46.730  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 01:04:46.732  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 01:04:47.032  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 3.526 seconds (JVM running for 6069.156)
+2022-02-07 01:04:47.043  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 01:04:49.274  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:49.274  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:04:49.274  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:49.274  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:04:51.431  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:51.431  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:04:51.431  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:51.432  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:04:53.585  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:53.586  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:04:53.585  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:53.586  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:04:55.833  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:55.835  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:55.835  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:04:55.835  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:04:58.224  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:58.225  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:04:58.287  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:04:58.287  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:01.118  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:01.120  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:01.120  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:01.120  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:04.188  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:04.189  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:04.311  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:04.311  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:07.227  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:07.227  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:07.466  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:07.466  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:10.372  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:10.372  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:10.387  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:10.388  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:13.406  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:13.406  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:13.595  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:13.595  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:16.500  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:16.500  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:16.814  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:16.814  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:19.460  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:19.460  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-2, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:20.025  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-02-07 01:05:20.025  WARN 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2022-02-07 01:05:21.281  INFO 7348 --- [Thread-55] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 01:05:21.281  INFO 7348 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644176121281, current=DOWN, previous=UP]
+2022-02-07 01:05:21.281  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 01:05:21.290  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 01:05:21.375  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group_id-1, groupId=group_id] Unsubscribed all topics or patterns and assigned partitions
+2022-02-07 01:05:21.376  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-02-07 01:05:21.376  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-02-07 01:05:21.376  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-02-07 01:05:21.378  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group_id-1 unregistered
+2022-02-07 01:05:21.379  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : group_id: Consumer stopped
+2022-02-07 01:05:21.377  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group_id-2, groupId=group_id] Unsubscribed all topics or patterns and assigned partitions
+2022-02-07 01:05:21.380  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-02-07 01:05:21.380  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-02-07 01:05:21.380  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-02-07 01:05:21.382  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group_id-2 unregistered
+2022-02-07 01:05:21.382  INFO 7348 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] essageListenerContainer$ListenerConsumer : group_id: Consumer stopped
+2022-02-07 01:05:21.387  INFO 7348 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 01:05:21.388  INFO 7348 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2022-02-07 01:05:21.407  INFO 7348 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2022-02-07 01:05:21.408  INFO 7348 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 01:05:24.415  INFO 7348 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 01:05:24.429  INFO 7348 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 01:05:24.437  INFO 7348 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 01:05:24.977  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 01:05:24.977  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 01:05:25.781  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 01:05:25.796  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
+2022-02-07 01:05:25.909  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 01:05:26.192  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 01:05:26.193  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 01:05:26.193  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 01:05:26.314  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 01:05:26.314  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1335 ms
+2022-02-07 01:05:26.433  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 01:05:26.439  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2022-02-07 01:05:26.475  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2022-02-07 01:05:26.475  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 01:05:26.545  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 01:05:26.546  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 01:05:27.076  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 01:05:27.433  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 01:05:27.690  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 01:05:28.087  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 01:05:28.112  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 01:05:28.151  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 01:05:28.153  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 01:05:28.158  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:05:28.159  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 01:05:28.159  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 01:05:28.159  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 01:05:28.159  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 01:05:28.159  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 01:05:28.160  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 01:05:28.160  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 01:05:28.172  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 01:05:28.173  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 01:05:28.174  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 01:05:28.174  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644176128174 with initial instances count: 3
+2022-02-07 01:05:28.178  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 01:05:28.178  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644176128178, current=UP, previous=STARTING]
+2022-02-07 01:05:28.179  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 01:05:28.180  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 01:05:28.202  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 01:05:28.211  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 01:05:28.431  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 3.646 seconds (JVM running for 6110.555)
+2022-02-07 01:05:28.434  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 01:10:28.176  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:15:28.182  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:20:28.192  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:25:28.209  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:27:51.571  INFO 7348 --- [Thread-61] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+2022-02-07 01:27:51.572  INFO 7348 --- [Thread-61] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644177471572, current=DOWN, previous=UP]
+2022-02-07 01:27:51.572  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 01:27:51.593  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 01:27:51.649  INFO 7348 --- [Thread-61] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 01:27:51.650  INFO 7348 --- [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2022-02-07 01:27:51.665  INFO 7348 --- [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2022-02-07 01:27:51.666  INFO 7348 --- [Thread-61] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-02-07 01:27:54.678  INFO 7348 --- [Thread-61] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-02-07 01:27:54.694  INFO 7348 --- [Thread-61] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - deregister  status: 200
+2022-02-07 01:27:54.698  INFO 7348 --- [Thread-61] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-02-07 01:27:55.126  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Starting FlightServiceApplication using Java 11.0.12 on JrJavaFseCogn-1 with PID 7348 (D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service\target\classes started by User in D:\Ananth Krishnan\MyRepo-main (1)\MyRepo-main\flight-service)
+2022-02-07 01:27:55.126  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : No active profile set, falling back to default profiles: default
+2022-02-07 01:27:56.013  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 01:27:56.025  INFO 7348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
+2022-02-07 01:27:56.140  INFO 7348 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dc5acbfc-d301-334f-8858-80b135f4409d
+2022-02-07 01:27:56.406  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2022-02-07 01:27:56.408  INFO 7348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-07 01:27:56.408  INFO 7348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-02-07 01:27:56.465  INFO 7348 --- [restartedMain] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring embedded WebApplicationContext
+2022-02-07 01:27:56.465  INFO 7348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1334 ms
+2022-02-07 01:27:56.594  INFO 7348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 01:27:56.601  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2022-02-07 01:27:56.633  INFO 7348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2022-02-07 01:27:56.633  INFO 7348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-07 01:27:56.677  INFO 7348 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 01:27:56.677  INFO 7348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 01:27:57.116  WARN 7348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 01:27:57.467  INFO 7348 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-02-07 01:27:57.582  WARN 7348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-07 01:27:58.023  INFO 7348 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-02-07 01:27:58.055  WARN 7348 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-02-07 01:27:58.083  INFO 7348 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-02-07 01:27:58.086  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-02-07 01:27:58.087  INFO 7348 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:27:58.087  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-02-07 01:27:58.088  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-02-07 01:27:58.088  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-02-07 01:27:58.088  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-02-07 01:27:58.088  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-02-07 01:27:58.088  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-02-07 01:27:58.088  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-02-07 01:27:58.106  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-02-07 01:27:58.107  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-02-07 01:27:58.108  INFO 7348 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-02-07 01:27:58.111  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1644177478111 with initial instances count: 3
+2022-02-07 01:27:58.116  INFO 7348 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+2022-02-07 01:27:58.116  INFO 7348 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1644177478116, current=UP, previous=STARTING]
+2022-02-07 01:27:58.117  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088: registering service...
+2022-02-07 01:27:58.127  INFO 7348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/airlines'
+2022-02-07 01:27:58.128  INFO 7348 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/host.docker.internal:flight-service:8088 - registration status: 204
+2022-02-07 01:27:58.129  INFO 7348 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2022-02-07 01:27:58.342  INFO 7348 --- [restartedMain] c.f.flights.FlightServiceApplication     : Started FlightServiceApplication in 3.405 seconds (JVM running for 7460.466)
+2022-02-07 01:27:58.345  INFO 7348 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-07 01:32:58.101  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:37:58.112  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:41:48.604  INFO 7348 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/airlines]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 01:41:48.604  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-07 01:41:48.607  INFO 7348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-07 01:42:58.119  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:47:58.130  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:52:58.156  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 01:57:58.171  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:02:58.174  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:07:58.189  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:12:58.205  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:17:58.216  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:22:58.227  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:27:58.237  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:32:58.241  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:37:58.248  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:41:46.339  WARN 7348 --- [http-nio-8088-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot coerce empty String ("") to `com.flightapp.flights.model.TypeOfMeal` value (but could if coercion was enabled using `CoercionConfig`); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot coerce empty String ("") to `com.flightapp.flights.model.TypeOfMeal` value (but could if coercion was enabled using `CoercionConfig`)<LF> at [Source: (PushbackInputStream); line: 1, column: 270] (through reference chain: com.flightapp.flights.dto.FlightDTO["meals"])]
+2022-02-07 02:42:58.255  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:47:58.264  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:52:58.266  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 02:57:58.278  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 03:02:58.291  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 03:07:58.303  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 03:12:58.314  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 03:17:58.317  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 08:22:09.705  WARN 7348 --- [HikariPool-12 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Thread starvation or clock leap detected (housekeeper delta=50s395ms263µs).
+2022-02-07 08:25:46.348  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 08:30:46.365  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 08:35:46.380  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 08:40:46.384  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 08:45:46.398  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 08:50:46.410  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 08:55:46.415  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 09:00:46.422  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 09:05:46.438  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 09:10:46.453  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 09:15:46.462  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 09:20:46.465  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-02-07 09:25:46.473  INFO 7348 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

@@ -30,8 +30,8 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	@KafkaListener(topics = "bookticket", groupId = "group_id", containerFactory = "userKafkaListenerFactory")
-	@KafkaListener(topics = "cancelticket", groupId = "group_id", containerFactory = "userKafkaListenerFactory")
+//	@KafkaListener(topics = "bookticket", groupId = "group_id", containerFactory = "userKafkaListenerFactory")
+//	@KafkaListener(topics = "cancelticket", groupId = "group_id", containerFactory = "userKafkaListenerFactory")
 	public FlightDTO updateAirlineWithInventoryOrSchedule(FlightDTO flightToBeUpdated) throws Exception {
 		Optional<FlightEntity> optionalFlight = flightRepository
 				.findByFlightNumber(flightToBeUpdated.getFlightNumber());
@@ -41,10 +41,10 @@ public class FlightServiceImpl implements FlightService {
 			FlightDTO flightDto = modelMapper.map(optionalFlight.get(), FlightDTO.class);
 			flightDto.setReturnDate(flightToBeUpdated.getReturnDate() == null ? flightDto.getReturnDate()
 					: flightToBeUpdated.getReturnDate());
-			flightDto.setDepartureTime(flightToBeUpdated.getDepartureTime() == null ? flightDto.getDepartureTime()
-					: flightToBeUpdated.getDepartureTime());
-			flightDto.setReturnTime(flightToBeUpdated.getReturnTime() == null ? flightDto.getReturnTime()
-					: flightToBeUpdated.getReturnTime());
+//			flightDto.setDepartureTime(flightToBeUpdated.getDepartureTime() == null ? flightDto.getDepartureTime()
+//					: flightToBeUpdated.getDepartureTime());
+//			flightDto.setReturnTime(flightToBeUpdated.getReturnTime() == null ? flightDto.getReturnTime()
+//					: flightToBeUpdated.getReturnTime());
 			flightDto.setEquipmentUsed(
 					flightToBeUpdated.getEquipmentUsed() == null || flightToBeUpdated.getEquipmentUsed().isEmpty()
 							? flightDto.getEquipmentUsed()
@@ -110,11 +110,13 @@ public class FlightServiceImpl implements FlightService {
 		return modelMapper.map(flightRepository.saveAll(flightEntities), dtoList);
 	}
 
-	@Cacheable(value = "flights")
+//	@Cacheable(value = "flights")
 	@Override
 	public List<FlightDTO> getAllUnblockedFlights() {
 		Type dtoList = new TypeToken<List<FlightDTO>>() {
 		}.getType();
+//		List<FlightDTO> flightDTOs = modelMapper.map(flightRepository.findAllByisBlockedFalse(), dtoList);
+//		System.out.println(flightDTOs);
 		return modelMapper.map(flightRepository.findAllByisBlockedFalse(), dtoList);
 	}
 
