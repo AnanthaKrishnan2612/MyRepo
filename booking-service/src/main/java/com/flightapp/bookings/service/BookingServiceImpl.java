@@ -3,7 +3,10 @@ package com.flightapp.bookings.service;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -13,6 +16,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.flightapp.bookings.controller.BookingController;
 import com.flightapp.bookings.dto.BookingDTO;
 import com.flightapp.bookings.dto.FlightDTO;
 import com.flightapp.bookings.entity.Passenger;
@@ -39,7 +43,7 @@ public class BookingServiceImpl implements BookingService{
 
 	@Autowired
 	private RestTemplate restTemplate;
-	
+	private static final Logger logger = LoggerFactory.getLogger(BookingServiceImpl.class);
 
 
 	public List<TicketDetails> getTicketDetails(String emailId) {
@@ -66,7 +70,7 @@ public class BookingServiceImpl implements BookingService{
 		requestHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		HttpEntity<FlightDTO> request = new HttpEntity<>(flight, requestHeaders);
 
-		ResponseEntity<FlightDTO[]> response = restTemplate.postForEntity("http://FLIGHT-SERVICE//flights/search", request,
+		ResponseEntity<FlightDTO[]> response = restTemplate.postForEntity("http://localhost:8088/airlines/airlines/search", request,
 				FlightDTO[].class);
 		return Arrays.asList(response.getBody());
 	}
@@ -75,14 +79,19 @@ public class BookingServiceImpl implements BookingService{
 		BookingDTO bookingDetails = ticketService.getTicketInfoForPnr(pnrNo);
 		
 		Date date = new Date();
-		Integer difference = bookingDetails.getTicketDetails().getDepartureDate().getDate()- date.getDate();
+//		logger.info("depDate : {} and today date- :{} ", bookingDetails.getTicketDetails().getDepartureDate().getDate(),date.getDate());
+		
+		Long difference = bookingDetails.getTicketDetails().getDepartureDate().getTime()- date.getTime();
+		
+		logger.info("No of days to journey: {}" , TimeUnit.DAYS.convert(difference, TimeUnit.MILLISECONDS));
 		if(difference >1) {
 			FlightDTO flight = bookingDetails.getFlightDetails();
 			flight.setIsBooked(false);
 			flight.setTotalSeats(bookingDetails.getPassengerDetails().size());
-			kafkaTemplate.send(TOPIC_CANCEL_FLIGHT, flight);
+//			kafkaTemplate.send(TOPIC_CANCEL_FLIGHT, flight);
 			TicketDetails ticketDetails = bookingDetails.getTicketDetails();
 			ticketDetails.setBookingStatus("CANCELLED");
+			logger.info("Ticket Cancelled");
 			return bookingrepository.save(ticketDetails);
 		}else {
 			throw new Exception("Ticket Cannot be cancelled");

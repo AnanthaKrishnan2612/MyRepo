@@ -12,6 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -22,7 +23,7 @@ import com.flightapp.bookings.entity.Passenger;
 import com.flightapp.bookings.entity.TicketDetails;
 import com.flightapp.bookings.repository.BookingRepository;
 import com.flightapp.bookings.repository.PassengerRepository;
-
+@Service
 public class TicketServiceImpl implements TicketService {
 	
 	@Autowired
@@ -55,7 +56,7 @@ public class TicketServiceImpl implements TicketService {
 		requestHeaders.add("Authorization", request.getHeader("Authorization"));
 		HttpEntity<FlightDTO> requestEntity = new HttpEntity<FlightDTO>(null, requestHeaders);
 		ResponseEntity<FlightDTO> response = restTemplate
-				 .exchange("http://FLIGHT-SERVICE//flights/flight/" + bookedTicket.get().getFlightNumber(), HttpMethod.GET, requestEntity, FlightDTO.class);
+				 .exchange("http://localhost:8088/airlines/airlines/flight/" + bookedTicket.get().getFlightNumber(), HttpMethod.GET, requestEntity, FlightDTO.class);
 		
 		ticketBooked.setFlightDetails(response.getBody());
 
