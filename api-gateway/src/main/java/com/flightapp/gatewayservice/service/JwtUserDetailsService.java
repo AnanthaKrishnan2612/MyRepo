@@ -44,14 +44,15 @@ public class JwtUserDetailsService implements UserDetailsService {
 		if ("admin".equals(username)) {
         	Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
         	authorities.add(new SimpleGrantedAuthority("ADMIN"));
-			return new User("admin", "$2a$12$UncADuNPGujELKWupcDdsO7zBNAxOxJZwB..tE.dbA5SOwVrew1Oi", authorities);
+//			return new User("admin", "$2a$12$UncADuNPGujELKWupcDdsO7zBNAxOxJZwB..tE.dbA5SOwVrew1Oi", authorities);
+			return JwtUserDetails.build("admin","admin@mail.com","$2a$04$tPJyRFIp5iUBvJzq6fqC6evG5e1jaZ6ws5J0NjhsZSWmvsCC688mW",authorities);
 		}else {
 			Optional<UserEntity> optionalUserEntity = userRepository.findByUsername(username);
 			if(optionalUserEntity.isPresent()) {
 				UserEntity userEntity = optionalUserEntity.get();
 				Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
 	        	authorities.add(new SimpleGrantedAuthority(userEntity.getRole()));
-				return new User (userEntity.getUsername(),userEntity.getPassword(),authorities);
+				return  JwtUserDetails.build(userEntity.getUsername(),userEntity.getEmail(),userEntity.getPassword(),authorities);
 			}else {
 				throw new UsernameNotFoundException("User not found with username: " + username);
 			}
