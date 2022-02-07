@@ -6,8 +6,8 @@ spring:
   application:
     name: booking-service
   datasource:
-    password: pass@word1
-    url: jdbc:mysql:/localhost:3306/bookings?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    password: password
+    url: jdbc:mysql://flight-app-db.csg5ayadiun2.us-east-1.rds.amazonaws.com/bookings?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
   jpa:
       show-sql: true
