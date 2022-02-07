@@ -17,6 +17,7 @@ import com.flightapp.gatewayservice.DTO.JwtResponse;
 import com.flightapp.gatewayservice.DTO.JwtUserDetails;
 import com.flightapp.gatewayservice.DTO.MessageResponse;
 import com.flightapp.gatewayservice.DTO.RegisterUserRequest;
+import com.flightapp.gatewayservice.repository.UserRepository;
 import com.flightapp.gatewayservice.service.JwtUserDetailsService;
 import com.flightapp.gatewayservice.util.JwtUtils;
 
@@ -33,6 +34,10 @@ public class JwtAuthenticationController {
 
 	@Autowired
 	private JwtUserDetailsService userDetailsService;
+	
+	
+	@Autowired
+	UserRepository userRepository;
 	
 	@Autowired
 	JwtUtils jwtUtils;
@@ -58,6 +63,17 @@ public class JwtAuthenticationController {
 	@PostMapping("/user/register")
 	public ResponseEntity<?> registerUser(@RequestBody RegisterUserRequest request){
 		try {
+			if (userRepository.existsByUsername(request.getUsername())) {
+				return ResponseEntity
+						.badRequest()
+						.body(new MessageResponse("Error: Username is already taken!"));
+			}
+
+			if (userRepository.existsByEmail(request.getEmail())) {
+				return ResponseEntity
+						.badRequest()
+						.body(new MessageResponse("Error: Email is already in use!"));
+			}
 		userDetailsService.saveUser(request);
 		}
 		catch(Exception E) {
@@ -67,6 +83,7 @@ public class JwtAuthenticationController {
 		
 		
 	}
+	
 	
 	@PostMapping("/user/login")
 	public ResponseEntity<?> userLogin(@RequestBody  JwtRequest authenticationRequest) throws Exception{
